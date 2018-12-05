@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+
+use App\StategySorting;
+require_once __DIR__ . '/../vendor/autoload.php';
+
+
+$data = [
+        1,21,3,2,5,35,23,44
+        ];
+
+$sort = new StategySorting($data);
+print_r($sort->getData());
+
+$sort->sortDATA();
+print_r($sort->getData());
+
+$sort->sortStrategy("down");
+$sort->sortDATA();
+print_r($sort->getData());
+
+
+$sort->sortStrategy("d222");
